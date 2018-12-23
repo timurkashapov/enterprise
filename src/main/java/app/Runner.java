@@ -9,7 +9,7 @@ import javax.script.ScriptException;
 
 public class Runner {
 
-    static class HelloScriptingWorld {
+    private static class HelloScriptingWorld {
 
     }
 
