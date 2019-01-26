@@ -7,14 +7,14 @@
     <groupId>com.shako</groupId>
     <artifactId>enterprise</artifactId>
     <packaging>pom</packaging>
-    <version>${platform.version}</version>
+    <version>1.0</version>
     <modules>
         <module>dao</module>
     </modules>
 
 
     <properties>
-        <platform.version>1.0</platform.version>
+        <platform.version>${project.version}</platform.version>
 
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
@@ -35,12 +35,11 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>com.shako</groupId>
-            <artifactId>dao</artifactId>
-            <version>${platform.version}</version>
-        </dependency>
-
+        <!--<dependency>-->
+            <!--<groupId>com.shako</groupId>-->
+            <!--<artifactId>dao</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>

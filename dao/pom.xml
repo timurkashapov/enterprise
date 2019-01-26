@@ -5,18 +5,10 @@
     <parent>
         <artifactId>enterprise</artifactId>
         <groupId>com.shako</groupId>
-        <version>${platform.version}</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dao</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.shako</groupId>
-            <artifactId>enterprise</artifactId>
-            <version>${platform.version}</version>
-        </dependency>
-    </dependencies>
 
 </project>  
