@@ -8,7 +8,7 @@ package util;
  *
  *
  */
-public class R {
+public final class R {
 
     public static final double PI = Math.PI;
 }

@@ -1,7 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/
+
+.idea
+.idea/misc.xml
+.idea/workspace.xml
 *.iml
 
-/target
-.gitignore
+target
 
