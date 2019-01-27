@@ -14,9 +14,39 @@ public final class Runner {
     private static Console console = System.console();
     private static Calendar calendar = Calendar.getInstance();
 
-    static final class Math {
+    public static final class Math {
 
-        static int[] evenOf(final String[] arr) {
+        public static int max(String[] arr) {
+            int res = 0;
+            for (String str: arr) {
+                if (!str.trim().isEmpty()) {
+                    try {
+                        int n = Integer.parseInt(str.trim());
+                        if (res <= n) res = n;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Целые числа блять введи! сука ты ёбаная!!!");
+                    }
+                }
+            }
+            return res;
+        }
+
+        public static int min(String[] arr) {
+            int res = 0;
+            for (String str: arr) {
+                if (!str.trim().isEmpty()) {
+                    try {
+                        int n = Integer.parseInt(str.trim());
+                        if (res >= n) res = n;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Целые числа блять введи! сука ты ёбаная!!!");
+                    }
+                }
+            }
+            return res;
+        }
+
+        public static int[] even(final String[] arr) {
             int[] intEvenNumbers = new int[arr.length];
             int i = 0;
             for (String str: arr) {
@@ -36,7 +66,7 @@ public final class Runner {
             return res;
         }
 
-        static int[] oddOf(final String[] arr) {
+        public static int[] odd(final String[] arr) {
             int[] intOddNumbers = new int[arr.length];
                 int i = 0;
                 for (String str: arr) {
@@ -66,8 +96,10 @@ public final class Runner {
             System.out.print("\nввести с консоли N челых чисел:\t");
             String input = isbuffer.readLine(); System.out.println();
             final String[] strNumbers = input.trim().split(" ");
-            System.out.println(Arrays.toString(Math.evenOf(strNumbers)));
-            System.out.println(Arrays.toString(Math.oddOf(strNumbers)));
+            System.out.println(Arrays.toString(Math.even(strNumbers)));
+            System.out.println(Arrays.toString(Math.odd(strNumbers)));
+            System.out.println(Math.max(strNumbers));
+            System.out.println(Math.min(strNumbers));
 
             isbuffer.close();
             isreader.close();

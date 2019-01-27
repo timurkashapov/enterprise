@@ -1,6 +1,6 @@
-package com.shako;
+package com.shako.service;
 
-public interface Dao {
+public interface Service {
 
 	void create();
 	void read();
